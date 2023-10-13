@@ -1,0 +1,26 @@
+<button (click)="dataFetch()">Fetch</button>
+<div class="data_div">
+    <img class="data_logo" src="path/to/logo.png" alt="image" />
+  </div>
+  <div class="info">
+    <h4 class="info_tag">Document Type: Aadhar Card</h4>
+    <h4 class="info_tag">Document Last 4 digits: {{ imageUrl.aadhaar_last_4_digit }}</h4>
+    <h4 class="info_tag">Name: {{ imageUrl.name }}</h4>
+    <h4 class="info_tag">Gender: {{ imageUrl.gender }}</h4>
+    <h4 class="info_tag">DOB: {{ imageUrl.dob }}</h4>
+    <h4 class="info_tag">
+      Address: {{ imageUrl.house }} {{ imageUrl.street }} {{ imageUrl.subdistrict }} {{ imageUrl.state }}
+    </h4>
+  </div>
+  <div class="data">
+    <div class="data_left">
+      <h1>Before</h1>
+      <img class="document_img" [src]="imageUrl" alt="image" />
+      <h3>Size of the image: 8mb</h3>
+    </div>
+    <div class="data_right">
+      <h1>After</h1>
+      <img class="document_img" [src]="" alt="image" />
+      <h3>Size of the image: 4mb</h3>
+    </div>
+  </div>
